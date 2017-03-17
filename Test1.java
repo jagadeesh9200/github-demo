@@ -1,13 +1,26 @@
-package job;
+package mypack;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class Test1 
 {
-
-	public static void main(String[] args) 
-	{
-		System.out.println("AMMA NANNA OKA GURUVU");
-		System.out.println("AM A NAGASWARAO SIR STUDENT");
-
-	}
-
+	public WebDriver driver;
+  @Test(priority=0)
+  public void launch() throws Exception
+  {
+	  //Launch site
+	  System.setProperty("webdriver.chrome.driver","F:\\Batch230\\chromedriver.exe");
+	  driver=new ChromeDriver();
+	  driver.get("http://www.gmail.com");
+	  Thread.sleep(5000);
+  }
+  @Test(priority=1)
+  public void close() throws Exception
+  {
+	  //Close site
+	  driver.close();
+  }
+  
 }

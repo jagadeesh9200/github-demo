@@ -1,27 +1,19 @@
-package job;
+package mypack;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class Test2 
 {
-
-	
-	public static void main(String[] args) throws InterruptedException 
-	{
-	
-		System.setProperty("webdriver.chrome.driver","F:\\Batch230\\chromedriver.exe");
-		
-		WebDriver driver=new ChromeDriver();
-		
-		driver.get("http:\\www.google.co.in");
-		
-		Thread.sleep(5000);
-		
-		driver.close();
-	
-		
-
-	}
-
+	public WebDriver driver;
+  @Test
+  public void f()throws Exception 
+  {
+	  System.setProperty("webdriver.chrome.driver","F:\\Batch230\\chromedriver.exe");
+	  driver=new ChromeDriver();
+	  driver.get("http://www.yahoo.com");
+	  Thread.sleep(2000);
+	  driver.close();
+  }
 }
